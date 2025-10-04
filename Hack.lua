@@ -5615,3 +5615,76 @@ Tab:AddDropdown({
         print(Value)
     end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "Admin Panel",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+    Name = "Admin Panel I Beta"
+})
+
+Tab:AddButton({
+	Name = "Hq Admin Rank",
+	Callback = function()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddToggle({
+	Name = "Anti - Ban",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+
+Tab:AddToggle({
+    Name = "Anti - Kick",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+    end    
+})
+
+Tab:AddToggle({
+    Name = "Non Visual Admin",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+    end    
+})
+
+Tab:AddDropdown({
+	Name = "Command Delay",
+	Default = "10",
+	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the dropdown.
+Default = <string> - The default value of the dropdown.
+Options = <table> - The options in the dropdown.
+Callback = <function> - The function of the dropdown.
+]]
