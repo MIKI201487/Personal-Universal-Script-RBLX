@@ -5812,17 +5812,3 @@ Name = <string> - The name of the toggle.
 Default = <bool> - The default value of the toggle.
 Callback = <function> - The function of the toggle.
 ]]
-
-Tab:AddToggle({
-	Name = "Full Built In Package, Activate all features",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-
---[[
-Name = <string> - The name of the toggle.
-Default = <bool> - The default value of the toggle.
-Callback = <function> - The function of the toggle.
-]]
