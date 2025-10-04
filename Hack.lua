@@ -5538,3 +5538,80 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
+
+local Tab = Window:MakeTab({
+	Name = "Robux",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "Robux Hacks"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddButton({
+	Name = "Generate Robux I Conncected to Slider",
+	Callback = function()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddSlider({
+	Name = "Robux Amount",
+	Min = 0,
+	Max = 100000000,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Robux",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
+]]
+
+Tab:AddToggle({
+	Name = "Transfer Robux to Alt Account",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
+
+Tab:AddDropdown({
+    Name = "Select Waiting time",
+    Default = "100",
+    Options = {"50's", "100's", "150's", "200's", "250's", "300's", "350's", "400's", "450's", "500's"},
+    Callback = function(Value)
+        print(Value)
+    end    
+})
